@@ -1,76 +1,180 @@
-<div class="container">
+<div class="container-general">
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <div class="img-container text-start">
-      <%= link_to "#", class: "navbar-brand" do %>
-        <%= image_tag "star.jpg" %>
-      <% end %>
-      OneNightStar
-    </div>
-
-
-
-      <div class="search">
-        <input type="text" placeholder="search">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <div class="img-container text-start">
+        <%= link_to "#", class: "navbar-brand" do %>
+          <%= image_tag "star.jpg" %>
+        <% end %>
+        OneNightStar
       </div>
 
-      <%# <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown link
-        </a>
 
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+        <div class="search">
+          <input type="text" placeholder="search">
+        </div>
+
+        <%# <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div> %>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <%# if user_signed_in? %>
+            <li class="nav-item active">
+            <li class="nav-item">
+              <%= link_to "Create a new service", "#", class: "nav-link" %>
+            </li>
+              <%= link_to "Home", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Action", "#", class: "dropdown-item" %>
+                <%= link_to "Another action", "#", class: "dropdown-item" %>
+                <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              </div>
+            </li>
+          <%# else %>
+            <!--li class="nav-item"-->
+              <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <!--/li-->
+          <% #end %>
         </ul>
       </div>
-
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown link
-        </a>
-
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div> %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-          <li class="nav-item">
-            <%= link_to "Create a new service", "#", class: "nav-link" %>
-          </li>
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <% #end %>
-      </ul>
     </div>
   </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+         <div class="card-event">
+    <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+    <div class="card-event-infos">
+      <div>
+        <h2>Concert with Lady Gaga</h2>
+        <p>2 hours private concert with Lady Gaga</p>
+      </div>
+      <h2 class="card-event-pricing">£1 000 000</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+      </div>
+      <div class="col-4">
+         <div class="card-event">
+    <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+    <div class="card-event-infos">
+      <div>
+        <h2>Diner with Stephane Bern</h2>
+        <p>Diner in a secret restaurant with Stephane Bern</p>
+      </div>
+      <h2 class="card-event-pricing">£2 500</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+      </div>
+       <div class="col-4">
+         <div class="card-event">
+    <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+    <div class="card-event-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-event-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+      </div>
+       <div class="col-4">
+         <div class="card-event">
+    <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+    <div class="card-event-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-event-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+      </div>
+       <div class="col-4">
+         <div class="card-event">
+    <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+    <div class="card-event-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-event-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+      </div>
+      <div class="col-4">
+         <div class="card-event">
+    <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+    <div class="card-event-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-event-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+      </div>
+    </div>
+
+
+
+
+
 </div>
 
 
+    <div class="footer">
+      <div class="footer-copyright">
+          <i class="fa-solid fa-copyright"></i>2022 OneNightStar Inc.
+      </div>
+
+      <div class="contact">Contact</div>
+
+        <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+      </div>
 
 
 </div>
