@@ -1,0 +1,11 @@
+<h1>Service#new</h1>
+<p>Find me in app/views/services/new.html.erb</p>
+
+
+  <h3>Create a new service</h3>
+        <%= simple_form_for @service do |f| %>
+          <%= f.input :name %>
+          <%= f.input :category %>
+          <%= f.input :price %>
+          <%= f.submit %>
+        <% end %>
