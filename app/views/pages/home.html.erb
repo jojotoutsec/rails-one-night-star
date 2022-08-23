@@ -45,7 +45,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-          <%# if user_signed_in? %>
+          <% if user_signed_in? %>
             <li class="nav-item active">
             <li class="nav-item">
               <%= link_to "Create a new service", "#", class: "nav-link" %>
@@ -57,18 +57,21 @@
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Action", "#", class: "dropdown-item" %>
                 <%= link_to "Another action", "#", class: "dropdown-item" %>
-                <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+                <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
               </div>
             </li>
-          <%# else %>
+          <% else %>
             <!--li class="nav-item"-->
-              <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+              <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-success border border-white"%>
             <!--/li-->
-          <% #end %>
+          <% end %>
         </ul>
       </div>
     </div>
   </div>
+
+
+
 
 
   <div class="container">
@@ -78,7 +81,7 @@
         <div class="card-event-infos">
           <div>
             <h2>Concert with Lady Gaga</h2>
-            <p>2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga</p>
+            <p class="text-ellipsis--2">2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga2 hours private concert with Lady Gaga</p>
           </div>
            <h2 class="card-event-pricing">£1.000.000</h2>
         </div>
@@ -88,7 +91,7 @@
         <div class="card-event-infos">
           <div>
             <h2>Diner with Stephane Bern</h2>
-            <p>Diner in a secret restaurant with Stephane Bern</p>
+            <p class="text-ellipsis--2">Diner in a secret restaurant with Stephane Bern</p>
           </div>
           <h2 class="card-event-pricing">£2.500</h2>
         </div>
@@ -98,7 +101,7 @@
           <div class="card-event-infos">
             <div>
              <h2>Fight 1v1 Z</h2>
-             <p>Fight until ko vs le Z</p>
+             <p class="text-ellipsis--2">Fight until ko vs le Z</p>
             </div>
           <h2 class="card-event-pricing">£1</h2>
         </div>
@@ -109,7 +112,7 @@
             <div class="card-event-infos">
              <div>
               <h2>Concert with Lady Gaga</h2>
-              <p>2 hours private concert with Lady Gaga</p>
+              <p class="text-ellipsis--2">2 hours private concert with Lady Gaga</p>
              </div>
               <h2 class="card-event-pricing">£1.000.000</h2>
              </div>
@@ -121,7 +124,7 @@
             <div class="card-event-infos">
              <div>
               <h2>Concert with Lady Gaga</h2>
-              <p>2 hours private concert with Lady Gaga</p>
+              <p class="text-ellipsis--2">2 hours private concert with Lady Gaga</p>
              </div>
               <h2 class="card-event-pricing">£1.000.000</h2>
              </div>
@@ -133,7 +136,7 @@
             <div class="card-event-infos">
              <div>
               <h2>Concert with Lady Gaga</h2>
-              <p>2 hours private concert with Lady Gaga</p>
+              <p class="text-ellipsis--2">2 hours private concert with Lady Gaga</p>
              </div>
               <h2 class="card-event-pricing">£1.000.000</h2>
              </div>
