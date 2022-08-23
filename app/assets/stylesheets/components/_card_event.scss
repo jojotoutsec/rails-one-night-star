@@ -13,26 +13,25 @@
 // }
 
 
+// text-shadow: 0 0 10px rgb(0 0 0 / 70%);
+// box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 .card-event {
-  background-size: cover;
+  /* background-size: cover; */
+  background-color: #b3ff00;
   background-position: center;
-  height: 150px;
+  height: 250px;
   border-radius: 1px;
-  // box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 22px;
-  color: rgb(0, 0, 0);
+  color: black;
   font-weight: bolder;
   flex-direction: column;
-  // text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 }
 
 .card-event > img {
-  background-size: auto;
-  height: 100px;
-  width: auto;
+  height: 170px;
+  // width: auto;
   object-fit: cover;
 }
 
