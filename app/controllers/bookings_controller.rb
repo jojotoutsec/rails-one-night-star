@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:edit, :update, :destroy]
 
   def new
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
   end
 
   def create
@@ -39,6 +39,6 @@ private
   end
 
   def booking_params
-    params.require(:service).permit(:start_date, :end_date, :service_id, :user_id)
+    params.require(:service).permit(:start_date, :end_date)
   end
 end
