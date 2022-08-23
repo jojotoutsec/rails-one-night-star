@@ -1,1 +1,19 @@
 <h1>Services</h1>
+
+
+
+<%# @services => array instances  services
+iterer dessus
+mettre la card dans l'iteraion %>
+
+<div class="card-event">
+  <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+  <div class="card-event-infos">
+    <div>
+      <h2><%= @services.first.name %></h2>
+      <p><%= @services.first.category %></p>
+    </div>
+    <h2 class="card-event-pricing">£1 000 000</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
