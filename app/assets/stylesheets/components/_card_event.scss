@@ -1,13 +1,38 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+// .card-event {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   margin: 10px;
+// }
+
+
 .card-event {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 10px;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
+  // box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  flex-direction: column;
+  // text-shadow: 0 0 10px rgb(0 0 0 / 70%);
 }
 
 .card-event > img {
-  height: 200px;
-  width: 100%;
+  background-size: auto;
+  height: 100px;
+  width: auto;
   object-fit: cover;
 }
 
