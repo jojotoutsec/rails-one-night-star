@@ -12,7 +12,7 @@
 
   <div class = "reservation">
   <h2>New reservation</h2>
-  
+
   <%= simple_form_for [@service, @booking] do |f| %>
     <%= f.input :start_date, as: :date, start_year: Date.today.year + 10,
                                 end_year: Date.today.year,
