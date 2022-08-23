@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  before_action :set_service, only: %i[show]
 
   def index
     @services = Service.all
@@ -24,5 +25,9 @@ class ServicesController < ApplicationController
 
   def service_params
     params.require(:service).permit(:name, :category, :price)
+  end
+
+  def set_service
+    @service = Service.find(params[:id])
   end
 end
