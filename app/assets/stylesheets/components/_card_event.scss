@@ -36,9 +36,16 @@
   border-top-right-radius: 15px;
   height: 170px;
   object-fit: cover;
-
 }
 
+
+.carousel-item {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 170px;
+  object-fit: cover;
+
+}
 .carousel-item > img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -47,7 +54,9 @@
 
 }
 
-
+#myCarousel {
+  position: relative;
+}
 
 .card-event h2 {
   font-size: 16px;
