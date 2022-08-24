@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-puts "sart seeding"
+puts "start seeding"
 
 puts "destroy old data"
 
@@ -16,14 +16,22 @@ User.destroy_all
 
 puts "old data destroyed"
 
-puts "create user"
+puts "create users"
 user1 = User.create!(email: "sds@gmail.com", username: "Jo", password: "azerty", first_name: "john", last_name: "do")
 user2 = User.create!(email: "abcde@gmail.com", username: "ab", password: "azerty", first_name: "abc", last_name: "de")
 
 puts "create services"
 
 service1 = Service.create!(name: "Concert With Beyoncé", category: "Concert", price: 7000000, user_id: user1.id)
+service2 = Service.create!(name: "Dinner With Mbappé", category: "Dinner", price: 2000, user_id: user2.id)
+service3 = Service.create!(name: "Fight With McGregor", category: "Sport", price: 44000, user_id: user1.id)
+service4 = Service.create!(name: "A Night With Sponge Bob voice actor", category: "Time", price: 10, user_id: user2.id)
+service5 = Service.create!(name: "Dinner With Kanye West", category: "Dinner", price: 990000000, user_id: user1.id)
+service6 = Service.create!(name: "Footing With Jean Lassalle", category: "Sport", price: 1, user_id: user2.id)
+service7 = Service.create!(name: "A Day With Benoit Paire", category: "Time", price: 3300, user_id: user1.id)
+service8 = Service.create!(name: "Concert With Michael Jackson doppleganger", category: "Concert", price: 400000, user_id: user2.id)
+service9 = Service.create!(name: "Kayak With Philippe Croizon", category: "Sport", price: 900, user_id: user1.id)
 
 puts "create bookings"
-booking1 = Booking.create!(start_date: "2022-10-11", end_date: "2022-10-12", user_id: user2.id, service_id: service1.id )
+booking1 = Booking.create!(start_date: "2022-10-11", end_date: "2022-10-12", user_id: user2.id, service_id: service1.id)
 puts "all done"
