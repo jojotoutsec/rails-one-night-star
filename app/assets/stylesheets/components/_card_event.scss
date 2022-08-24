@@ -40,7 +40,7 @@
 }
 
 .card-event h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
   position: relative;
@@ -48,7 +48,7 @@
 }
 
 .card-event p {
-  font-size: 12px;
+  font-size: 11px;
   opacity: .7;
   margin: 0;
 }
@@ -73,11 +73,14 @@
   text-overflow:ellipsis;
   overflow:hidden;
   display: -webkit-box !important;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   white-space: normal;
 }
 
+a {
+  text-decoration: none;
+}
 // .card-event-infos .card-event-user {
 //   position: absolute;
 //   right: 16px;

@@ -3,13 +3,13 @@
       <% @services.each do |service| %>
         <%= link_to service_path(service) do %>
         <div class="card-event">
-          <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
+          <img src="https://i0.wp.com/theb-stage.com/wp-content/uploads/2022/05/Beyonce-performs-onstage-in-2009.-Photo-by-Jason-LaVerisFilmMagic.png?zoom=2&resize=800%2C445&ssl=1" />
           <div class="card-event-infos">
-            <div>
+            <div class ="text-ellipsis--2">
             <h2> <%= service.name %><h2>
-              <p class="text-ellipsis--2"><%= service.description %></p>
+              <p ><%= service.description %></p>
             </div>
-            <h2 class="card-event-pricing"><%= service.price %></h2>
+            <h2 class="card-event-pricing"><%= service.price %>€</h2>
           </div>
         </div>
         <% end %>
