@@ -2,13 +2,14 @@
   <div class="event">
   <h1><%= @service.name %></h1>
     <h3><%= @service.category %></h3>
-    <img src="https://i0.wp.com/theb-stage.com/wp-content/uploads/2022/05/Beyonce-performs-onstage-in-2009.-Photo-by-Jason-LaVerisFilmMagic.png?zoom=2&resize=800%2C445&ssl=1" />
+    <% if @service.image.nil? %>
+      <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80" />
+    <% else %>
+      <img src="<%= @service.image %>" alt="">
+    <% end %>
     <p> Price: <%= @service.price %> € </p>
     <p class="event-description"> <%= @service.description %> </p>
-
-
   </div>
-
 
   <div class = "reservation">
   <h2>New reservation</h2>
