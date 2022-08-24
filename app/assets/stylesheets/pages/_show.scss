@@ -2,16 +2,31 @@
   display: flex;
 }
 
+.container-new {
+  display: block;
+  padding: 30px;
+}
+
 .event {
-  margin: 10px;
+  margin: 20px 10px;
+  max-width: 60%;
+  text-align: justify;
+}
+
+.event img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: 0 0 3px;
+  width: 700px;
 }
 
 .reservation {
   margin: 10px;
 }
 
-.event h1 {
-  text-decoration: underline;
+.event h3 {
+  font-style: italic;
 }
 
 h3 {
@@ -26,4 +41,5 @@ h2 {
 
 p {
   font-style: italic;
+  padding: 15px;
 }
