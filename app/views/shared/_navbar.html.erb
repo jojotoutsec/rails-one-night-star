@@ -48,7 +48,9 @@
           <% if user_signed_in? %>
             <li class="nav-item active">
             <li class="nav-item">
-              <%= link_to "Create a new service", "#", class: "nav-link" %>
+              <%= link_to new_service_path, class: "nav-link" do %>
+              <span>Create a new service</span>
+              <% end %>
             </li>
               <%= link_to root_path, class: "nav-link" do %>
               <% end %>

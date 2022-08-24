@@ -1,10 +1,9 @@
 <div class="container">
   <div class="event">
-  <h1>Details of event</h1>
+  <h1><%= @service.name %></h1>
     <h3><%= @service.category %></h3>
-    <h2>  <%= @service.name %></h2>
     <img src="https://convention.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77891/ap-paris-event-center-format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-jean-claude-guilloux/15920942-1-fre-FR/AP-Paris-Event-Center-Format-d%C3%AEner-de-gala-%7C-630x405-%7C-%C2%A9-Jean-Claude-Guilloux.jpg" />
-    <p> Price: <%= @service.price %> £ </p>
+    <p> Price: <%= @service.price %> € </p>
     <p> <%= @service.description %> </p>
 
 
