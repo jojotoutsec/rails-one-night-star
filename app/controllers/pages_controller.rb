@@ -7,6 +7,8 @@ class PagesController < ApplicationController
 
   def profile
     @user = User.find(params[:id])
-  end
+    @user = current_user
 
+    @requested_services = current_user.requested_services
+  end
 end
