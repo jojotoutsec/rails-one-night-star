@@ -1,12 +1,26 @@
-<h1>My bookings</h1>
+<h1>Welcome to your profile page</h1>
 
-<%# if current_user %>
+<h2>My bookings</h2>
+  <% if current_user.bookings %>
+    <% current_user.bookings.each do |booking|%>
+    <%= booking.service.name %>
+    <%= booking.user.username %>
+    <%= booking.start_date %>
+    <%= booking.end_date %>
 
-<h1>My services</h1>
-<%# si current user a des bookings
-affiche les
+    <% end %>
+<% else %>
+  <p>Nothing here</p>
+<% end %>
 
-si current user a des services
-affiche les
-
-sinon afficher 'il n' y a rien' %>
+<h2>Who booked me?</h2>
+<% if current_user.requested_services.first %>
+    <% current_user.requested_services.each do |booking|%>
+      <%= booking.service.name %>
+      <%= booking.user.username %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+    <% end %>
+<% else %>
+  <p>Nothing here</p>
+<% end %>
