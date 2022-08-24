@@ -1,7 +1,7 @@
 <h1>Welcome to your profile page</h1>
 
 <h2>My bookings</h2>
-  <% if current_user.bookings %>
+  <% if current_user.bookings.first %>
     <% current_user.bookings.each do |booking|%>
     <%= booking.service.name %>
     <%= booking.user.username %>
