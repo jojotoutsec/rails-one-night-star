@@ -6,13 +6,20 @@ class BookingsController < ApplicationController
   end
 
   def create
+
     @booking = Booking.new(booking_params)
+
     @booking.user = current_user
+
     @booking.service = Service.find(params[:service_id])
+
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to service_path(@booking.service)
+      flash.alert = "Your reservation has been saved"
+
     else
-      render :new, status: :unprocessable_entity
+      redirect_to service_path(@booking.service), status: :unprocessable_entity
+      flash.alert = "Erreur"
     end
   end
 
@@ -39,6 +46,6 @@ private
   end
 
   def booking_params
-    params.require(:service).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :service_id, :user_id)
   end
 end
