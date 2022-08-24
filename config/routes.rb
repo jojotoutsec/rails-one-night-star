@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :services, only: %i[index show new create] do
     resources :bookings, only: %i[new create edit update destroy]
   end
+
+  get '/profile/:id', to: 'pages#profile', as: 'profile'
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
-
