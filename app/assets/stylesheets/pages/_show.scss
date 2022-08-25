@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  justify-content: space-between
 }
 
 .container-new {
@@ -22,7 +23,10 @@
 }
 
 .reservation {
+  top: 150px;
   margin: 10px;
+  position: sticky;
+  height: 30vh;
 }
 
 .event h3 {

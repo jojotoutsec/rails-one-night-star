@@ -10,3 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.wrapper{ 
+    min-height: 85vh;
+    height: calc(100% - 30px - 40px);
+}
+
