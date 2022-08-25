@@ -10,5 +10,6 @@ class PagesController < ApplicationController
     @user = current_user
 
     @requested_services = current_user.requested_services
+    @sorted_services =  current_user.requested_services.sort_by { |e| e[:start_date] }
   end
 end
