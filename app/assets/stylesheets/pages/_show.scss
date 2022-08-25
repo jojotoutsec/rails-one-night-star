@@ -18,8 +18,9 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  box-shadow: 0 0 3px;
-  width: 700px;
+  height: auto;
+  width: 640px;
+  border-radius: 5px;
 }
 
 .reservation {
@@ -46,4 +47,8 @@ h2 {
 p {
   font-style: italic;
   padding: 15px;
+}
+
+h1 {
+ text-align: left;
 }
