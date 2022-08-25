@@ -20,7 +20,8 @@
 }
 
 .card-event {
-  // height: 200px;
+  height: 200px;
+  padding-left: 0%;
   border-radius: 10px;
   display: flex;
   font-size: 22px;
@@ -28,6 +29,7 @@
   font-weight: bolder;
   flex-direction: row;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
 .card-event img {
@@ -35,6 +37,7 @@
   border-bottom-left-radius: 10px;
   height: 200px;
   width: 200px;
+  min-width: 200px;
   object-fit: cover;
 }
 
@@ -52,6 +55,7 @@
 }
 
 .card-event .card-event-infos {
+  text-overflow: ellipsis;
   padding-top: 22px;
   padding-left: 6px;
   padding-right: 5px;
