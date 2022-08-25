@@ -109,17 +109,17 @@
 }
 
 .card-event-infos {
-  height: 200px;
-  text-overflow: ellipsis;
-  padding-top: 22px;
-  padding-left: 6px;
-  padding-right: 6px;
+  // height: 200px;
+  // text-overflow: ellipsis;
+  // padding-top: 22px;
+  // padding-left: 6px;
+  // padding-right: 6px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   position: relative;
-  text-align: justify;
+  // text-align: justify;
 }
 
 .text-ellipsis {
@@ -132,7 +132,7 @@
   text-overflow:ellipsis;
   overflow:hidden;
   display: -webkit-box !important;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   white-space: normal;
 }
