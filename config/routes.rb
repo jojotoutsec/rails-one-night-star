@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  patch "profile/:id/accept", to: "bookings#accept", as: "accept"
+  patch "profile/:id/decline", to: "bookings#decline", as: "decline"
 end

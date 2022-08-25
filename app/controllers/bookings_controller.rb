@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:edit, :update, :destroy]
+  before_action :set_booking, only: [:edit, :update, :destroy, :accept, :decline]
 
   def new
     @booking = Booking.new
@@ -39,6 +39,19 @@ class BookingsController < ApplicationController
     redirect_to bookings_path, status: :see_other
   end
 
+  def accept
+    @booking.status = "Accepted"
+    @booking.save
+    redirect_to profile_path(current_user)
+  end
+
+
+  def decline
+    @booking.status = "Declined"
+    @booking.save
+    redirect_to profile_path(current_user)
+  end
+
 private
 
   def set_booking
@@ -46,6 +59,6 @@ private
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :service_id, :user_id)
+    params.require(:booking).permit(:start_date, :end_date, :service_id, :user_id, :status)
   end
 end
