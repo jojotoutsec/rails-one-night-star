@@ -1,4 +1,11 @@
-  <div class="container">
+  <div id="container">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://winegeek.fr/wp-content/uploads/2013/05/gatsby_le_magnifique_dicaprio.jpg)";>
+      <div class="banner-container">
+        <h1>Make this night a night to remember!</h1>
+        <p>Have a special moment with the celebrity you love</p>
+        <a class="banner-button" href="/services">Choose now</a>
+      </div>
+    </div>
     <div class="cards">
       <% @services.each do |service| %>
         <%= link_to service_path(service) do %>
@@ -11,10 +18,7 @@
           <% end %>
 
           <div class="card-event-infos">
-            <div>
-            <h2> <%= service.name %><h2>
-              <p ><%= service.description %></p>
-            </div>
+            <h2 class="text-ellipsis"> <%= service.name %><h2>
             <h2 class="card-event-pricing"><%= service.price %>€</h2>
           </div>
         </div>
