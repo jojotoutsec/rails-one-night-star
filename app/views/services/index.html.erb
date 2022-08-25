@@ -9,10 +9,10 @@
             <% else %>
               <img src="<%= service.image %>" alt="">
             <% end %>
-            <div class="card-event-infos">
+            <div class="card-event-infos p-3 pt-4">
               <h2><%= service.name %></h2>
-              <h3><%= service.price %> €</h3>
-                <p><%= service.description %></p>
+              <h3 class="pb-3"><%= service.price %> €</h3>
+                <p class="text-ellipsis--2 p-0"><%= service.description %></p>
             </div>
           </div>
         <% end %>
