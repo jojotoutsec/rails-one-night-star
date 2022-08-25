@@ -1,9 +1,8 @@
-
 .cards {
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   justify-content: center;
 }
 
@@ -21,20 +20,21 @@
 }
 
 .card-event {
-  height: 400px;
-  border-radius: 15px;
+  // height: 200px;
+  border-radius: 10px;
   display: flex;
   font-size: 22px;
   color: black;
   font-weight: bolder;
-  flex-direction: column;
-  box-shadow: 0 0 7px;
+  flex-direction: row;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-event > img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  height: 170px;
+.card-event img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 200px;
+  width: 200px;
   object-fit: cover;
 }
 
@@ -43,7 +43,6 @@
   font-weight: bold;
   margin: 0;
   position: relative;
-
 }
 
 .card-event p {
@@ -52,16 +51,17 @@
   margin: 0;
 }
 
-
 .card-event .card-event-infos {
   padding-top: 22px;
   padding-left: 6px;
   padding-right: 5px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
+
 .text-ellipsis{
   text-overflow:ellipsis;
   white-space:nowrap;
@@ -80,6 +80,7 @@
 a {
   text-decoration: none;
 }
+
 // .card-event-infos .card-event-user {
 //   position: absolute;
 //   right: 16px;
