@@ -11,9 +11,14 @@
 
 
 
-        <div class="search">
-          <input type="text" placeholder="search">
-        </div>
+        <%= form_with url: services_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a service"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 
         <%# <div class="dropdown">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

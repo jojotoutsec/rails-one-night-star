@@ -1,8 +1,13 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @services = Service.all
+    if params[:query].present?
+      @services = Service.global_search(params[:query])
+    else
+      @services = Service.all
+    end
   end
 
   def show
