@@ -1,29 +1,32 @@
-<h1>Welcome to your profile page</h1>
+<div class= 'welcome_profile center'>
+  <h1>Welcome to your profile page</h1>
+</div>
 
 <h2>My bookings</h2>
-  <% if current_user.bookings.first %>
+  <% if current_user.bookings.any? %>
     <% current_user.bookings.each do |booking|%>
     <p> <strong>Service:</strong> <%= booking.service.name %></p>
     <p> <strong>From:</strong> <%= booking.start_date %></p>
     <p><strong>To:</strong> <%= booking.end_date %></p>
-
-
     <% end %>
 <% else %>
   <p>Nothing here</p>
 <% end %>
 
 <h2>Who booked me?</h2>
-<% if current_user.requested_services.first %>
-    <% current_user.requested_services.each do |booking|%>
+<% if @sorted_services.any? %>
+    <% @sorted_services.each do |booking|%>
     <div class="border">
       <p><strong>Service:</strong> <%= booking.service.name %></p>
       <p><strong>booked by:</strong> <%= booking.user.username %></p>
       <p> <strong>From:</strong> <%= booking.start_date %></p>
       <p><strong>To:</strong> <%= booking.end_date %></p>
-      <%= booking.status %>
+      <% if booking.status == "Accepted" %>
+      <p>you accept this offer</p>
+      <% else %>
       <%= link_to 'accept', accept_path(booking), data: {turbo_method: :patch} %>
       <%= link_to 'decline', decline_path(booking), data: {turbo_method: :patch} %>
+      <% end %>
       </div>
     <% end %>
 <% else %>
