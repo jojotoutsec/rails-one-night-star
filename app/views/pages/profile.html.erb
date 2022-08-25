@@ -1,6 +1,6 @@
-<div class= 'welcome_profile center'>
-  <h1>Welcome to your profile page</h1>
-</div>
+<div class="container" >
+ <h1>Welcome to your profile page</h1>
+
 
 <h2>My bookings</h2>
   <% if current_user.bookings.any? %>
@@ -16,19 +16,25 @@
 <h2>Who booked me?</h2>
 <% if @sorted_services.any? %>
     <% @sorted_services.each do |booking|%>
-    <div class="border">
+    <div class="profile-booked">
+    <div>
       <p><strong>Service:</strong> <%= booking.service.name %></p>
       <p><strong>booked by:</strong> <%= booking.user.username %></p>
       <p> <strong>From:</strong> <%= booking.start_date %></p>
       <p><strong>To:</strong> <%= booking.end_date %></p>
+      </div>
+      <div>
       <% if booking.status == "Accepted" %>
-      <p>you accept this offer</p>
+      <p>you accepted this offer</p>
       <% else %>
       <%= link_to 'accept', accept_path(booking), data: {turbo_method: :patch} %>
       <%= link_to 'decline', decline_path(booking), data: {turbo_method: :patch} %>
       <% end %>
       </div>
+      </div>
     <% end %>
 <% else %>
   <p>Nothing yet</p>
 <% end %>
+
+</div>

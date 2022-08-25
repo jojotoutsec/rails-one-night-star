@@ -42,14 +42,14 @@ class BookingsController < ApplicationController
   def accept
     @booking.status = "Accepted"
     @booking.save
-    flash.alert = "Great! you just accepted an offer"
+    flash.alert = "Great! You just accepted an offer."
     redirect_to profile_path(current_user)
   end
 
   def decline
     @booking.status = "Declined"
     @booking.destroy
-    flash.alert = "You just declined an offer and It will be deleted from your list"
+    flash.alert = "You just declined an offer and it will be deleted from your list."
     redirect_to profile_path(current_user)
   end
 
