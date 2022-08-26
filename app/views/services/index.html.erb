@@ -1,4 +1,4 @@
-<h1>Services</h1>
+<h1 id="main-title">Fancy anything? 🤩</h1>
 <div class="container">
   <div class="cards">
       <% @services.each do |service| %>
@@ -11,7 +11,7 @@
             <% end %>
             <div class="card-event-infos p-3 pt-4">
               <h2><%= service.name %></h2>
-              <h3 class="pb-3"><%= service.price %> €</h3>
+              <h3 class="pb-3"><%= number_with_delimiter(service.price, delimiter: ' ') %> €</h3>
                 <p class="text-ellipsis--2 p-0"><%= service.description %></p>
             </div>
           </div>
