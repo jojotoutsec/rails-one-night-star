@@ -2,5 +2,25 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  background: linear-gradient(180deg, #130431 0%, #433F70 99.44%), #D9D9D9;
+  padding-top: 80px;
+  clip-path: polygon(34% 80%, 100% 47%, 100% 100%, 0 100%, 0 64%);
+}
 
+.contact{
+  text-align: center;
+  color: rgba(190, 155, 102, 1);
+}
+
+.fa-solid {
+  color: rgba(190, 155, 102, 1);
+
+}
+
+.footer-copyright {
+  color: rgba(190, 155, 102, 1);
+}
+
+a {
+  color: rgba(190, 155, 102, 1);
 }
