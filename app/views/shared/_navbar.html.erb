@@ -4,45 +4,18 @@
     <div class="container-fluid">
       <div class="img-container text-start">
         <%= link_to root_path, class: "navbar-brand" do %>
-          <%= image_tag "star.jpg" %>
+          <span><%= image_tag "https://i0.wp.com/soayam.com/wp-content/uploads/2021/02/stars.png?fit=128%2C128&ssl=1" %> OneNightStar</span>
         <% end %>
-        OneNightStar
       </div>
 
-
-
-        <%= form_with url: services_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a service"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
-        <%# <div class="dropdown">
-          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown link
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-
-        <div class="dropdown">
-          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown link
-          </a>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div> %>
+      <%= form_with url: services_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a service"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -69,11 +42,10 @@
               </div>
             </li>
           <% else %>
-            <!--li class="nav-item"-->
-              <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-success border border-white"%>
-            <!--/li-->
+            <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-success border border-white"%>
           <% end %>
         </ul>
       </div>
     </div>
   </div>
+</div>
