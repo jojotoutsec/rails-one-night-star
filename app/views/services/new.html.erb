@@ -1,11 +1,13 @@
-<div class="container-new-service">
-  <h1>Add your service!</h1>
+<div class="container mt-5">
+  <div class="container-new-service">
+    <h1>Add your service! ✨</h1>
 
-  <%= simple_form_for @service do |f| %>
-    <%= f.input :name %>
-    <%= f.input :category, collection: ['Dinner', 'Sport', 'Concert', 'Time'] %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.submit %>
-  <% end %>
+    <%= simple_form_for @service do |f| %>
+      <%= f.input :name %>
+      <%= f.input :category, collection: ['Dinner', 'Sport', 'Concert', 'Time'] %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.submit style: "background-color: rgba(190, 155, 102, 1)", class: "mt-3 golden-btn" %>
+    <% end %>
+  </div>
 </div>

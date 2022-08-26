@@ -35,4 +35,5 @@ service9 = Service.create!(image: "https://images.unsplash.com/photo-1562388831-
 puts "create bookings"
 
 booking1 = Booking.create!(start_date: "2022-10-11", end_date: "2022-10-12", user_id: user2.id, service_id: service1.id)
+
 puts "all done"
