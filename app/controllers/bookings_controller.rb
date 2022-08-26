@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.service = Service.find(params[:service_id])
 
     if @booking.save
-      redirect_to service_path(@booking.service)
+      redirect_to profile_path(current_user)
       flash.alert = "Your reservation has been saved"
 
     else
