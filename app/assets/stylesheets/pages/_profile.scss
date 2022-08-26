@@ -1,10 +1,49 @@
 .profile-booked {
-  border: solid 1px rgb(142, 141, 137);
+  background-color: rgb(204, 204, 204);
+  border: solid 1px rgb(246, 246, 245);
   padding: 16px;
   display: flex;
   justify-content: space-between;
+  box-shadow: bisque;
 }
 .profile-booked p {
   margin: 0;
   padding: 0;
+}
+
+.i-booked {
+  background-color: rgb(220, 214, 214);
+  border: solid 1px rgb(245, 244, 239);
+  padding: 16px;
+  justify-content: space-between;
+}
+.i-booked p {
+  margin: 0;
+  padding: 0;
+}
+.title{
+  color: goldenrod;
+  text-align: center;
+}
+.mini-title{
+  color:rgb(153, 125, 118);
+}
+.accepted-offer{
+  color: rgb(253, 252, 252);
+}
+
+.container{
+  background-color: rgb(254, 230, 199);
+  border: solid 1px rgb(245, 244, 239);
+  padding: 100px;
+  justify-content: space-between;
+}
+
+.booking-title{
+  color: dimgrey;
+  padding: 16px;
+}
+.booked-title{
+  color: dimgrey;
+  padding: 16px;
 }
