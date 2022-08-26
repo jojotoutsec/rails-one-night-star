@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    @services = Service.all.reverse
+    @services = Service.all.reverse.first(3)
   end
 
   def profile
