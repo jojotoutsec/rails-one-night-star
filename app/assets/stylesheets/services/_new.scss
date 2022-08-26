@@ -14,3 +14,11 @@
   transition: .2s;
   transform: scale(1.05);
 }
+
+#service_background_image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 45vh;
+}
