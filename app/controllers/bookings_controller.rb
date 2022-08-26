@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.service = Service.find(params[:service_id])
 
     if @booking.save
-      redirect_to service_path(@booking.service)
+      redirect_to profile_path(current_user)
       flash.alert = "Your reservation has been saved"
 
     else
@@ -42,13 +42,14 @@ class BookingsController < ApplicationController
   def accept
     @booking.status = "Accepted"
     @booking.save
+    flash.alert = "Great! You just accepted an offer."
     redirect_to profile_path(current_user)
   end
 
-
   def decline
     @booking.status = "Declined"
-    @booking.save
+    @booking.destroy
+    flash.alert = "You just declined an offer and it will be deleted from your list."
     redirect_to profile_path(current_user)
   end
 

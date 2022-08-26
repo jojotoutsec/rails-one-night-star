@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container container-show">
   <div class="event">
   <h1><%= @service.name %></h1>
     <h3><%= @service.category %></h3>
@@ -11,17 +11,20 @@
     <p class="event-description"> <%= @service.description %> </p>
   </div>
 
-  <div class = "reservation">
-  <h2>New reservation</h2>
+  <% unless @service.user == current_user %>
+    <div class = "reservation">
+    <h2>New reservation</h2>
 
-  <%= simple_form_for [@service, @booking] do |f| %>
-    <%= f.input :start_date, as: :date, start_year: Date.today.year + 10,
-                                end_year: Date.today.year,
-                                order: [:day, :month, :year] %>
-    <%= f.input :end_date, as: :date, start_year: Date.today.year + 10,
-                                end_year: Date.today.year,
-                                order: [:day, :month, :year] %>
-    <%= f.button :submit, class: "btn btn-primary" %>
+    <%= simple_form_for [@service, @booking] do |f| %>
+      <%= f.input :start_date, as: :date, start_year: Date.today.year + 10,
+                                  end_year: Date.today.year,
+                                  order: [:day, :month, :year] %>
+      <%= f.input :end_date, as: :date, start_year: Date.today.year + 10,
+                                  end_year: Date.today.year,
+                                  order: [:day, :month, :year] %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+
+    </div>
   <% end %>
   </div>
-
