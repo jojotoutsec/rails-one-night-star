@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="img-container text-start">
         <%= link_to root_path, class: "navbar-brand" do %>
-          <span><%= image_tag "https://i0.wp.com/soayam.com/wp-content/uploads/2021/02/stars.png?fit=128%2C128&ssl=1" %> OneNightStar</span>
+          <span style="color: rgba(190, 155, 102, 1)"><%= image_tag "https://i0.wp.com/soayam.com/wp-content/uploads/2021/02/stars.png?fit=128%2C128&ssl=1" %> OneNightStar</span>
         <% end %>
       </div>
 
@@ -14,7 +14,7 @@
           class: "form-control",
           placeholder: "Find a service"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= submit_tag "Search", class: "btn mx-3", style: "background-color: rgba(190, 155, 102, 1); filter: drop-shadow(0px 4px 24px #9B9068)" %>
       <% end %>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
             <li class="nav-item active">
             <li class="nav-item">
               <%= link_to new_service_path, class: "nav-link" do %>
-              <span>Create a new service</span>
+              <span style="color: rgba(190, 155, 102, 1)">Create a new service</span>
               <% end %>
             </li>
               <%= link_to root_path, class: "nav-link" do %>
