@@ -1,3 +1,7 @@
+.container-profile {
+  padding-top: 30px;
+}
+
 .profile-booked {
   background-color: rgb(204, 204, 204);
   border: solid 1px rgb(246, 246, 245);
@@ -22,7 +26,6 @@
   padding: 0;
 }
 .title{
-  margin-top: 30px;
   color: rgba(190, 155, 102, 1);
   text-align: center;
 }
@@ -51,4 +54,12 @@
   border-radius: 14px;
   margin: 10px;
   background-color: rgb(183, 169, 148);
+}
+
+#profile_background_image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 70vh;
 }

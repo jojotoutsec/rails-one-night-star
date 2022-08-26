@@ -13,6 +13,5 @@
 @import "services/index";
 
 .wrapper{
-    min-height: 84vh;
-    height: calc(100% - 105px - 40px);
+    min-height: calc(100vh - 104px - 56px);
 }
