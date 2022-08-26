@@ -1,8 +1,8 @@
 <div class="container-profile" >
- <h1 class="title">Welcome to your profile page</h1>
+ <h1 class="title">Hello, <%= current_user.first_name %>  👋</h1>
 
-<div class="d-flex center">
-  <div>
+<div class="d-flex">
+  <div class="card">
     <h2 class="booking-title">My bookings: </h2>
       <% if current_user.bookings.any? %>
         <% current_user.bookings.each do |booking|%>
@@ -16,7 +16,7 @@
       <p>Nothing here</p>
     <% end %>
   </div>
-  <div>
+  <div class="card">
     <h2 class="booked-title">Who booked me?</h2>
     <% if @sorted_services.any? %>
         <% @sorted_services.each do |booking|%>

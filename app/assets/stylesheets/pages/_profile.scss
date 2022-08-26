@@ -22,7 +22,8 @@
   padding: 0;
 }
 .title{
-  color: goldenrod;
+  margin-top: 30px;
+  color: rgba(190, 155, 102, 1);
   text-align: center;
 }
 .mini-title{
@@ -33,10 +34,21 @@
 }
 
 .booking-title{
-  color: dimgrey;
+  color: rgb(255, 255, 255);
   padding: 16px;
 }
 .booked-title{
-  color: dimgrey;
+  color: rgb(255, 255, 255);
   padding: 16px;
+}
+.d-flex {
+  align-items: baseline;
+  justify-content: center;
+
+}
+
+.card {
+  border-radius: 14px;
+  margin: 10px;
+  background-color: rgb(183, 169, 148);
 }
