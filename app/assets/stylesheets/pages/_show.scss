@@ -9,7 +9,7 @@
 }
 
 .event {
-  margin: 20px 10px;
+  margin: 0px 10px 20px 10px;
   max-width: 60%;
   text-align: justify;
 }
@@ -21,6 +21,7 @@
   height: auto;
   width: 640px;
   border-radius: 5px;
+  object-fit: contain;
 }
 
 .reservation {
@@ -32,6 +33,11 @@
 
 .event h3 {
   font-style: italic;
+}
+
+.event h2 {
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 h3 {

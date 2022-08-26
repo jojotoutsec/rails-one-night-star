@@ -98,6 +98,8 @@ a {
 
 a:hover {
   opacity: 1;
+  transition: .2s;
+  transform: scale(1.05);
 }
 
 .cards-home {
@@ -133,9 +135,10 @@ a:hover {
 }
 
 .card-event-infos-home h2 {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: bolder;
   margin: 0 0 0 3;
-  text-align: center;
+  text-align: left;
   padding-bottom: 30px;
+  padding-left: 15px;
 }
