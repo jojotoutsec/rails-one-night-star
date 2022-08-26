@@ -6,22 +6,24 @@
         <a class="banner-button" href="/services">Choose now</a>
       </div>
     </div>
-    <div class="cards-home">
-      <% @services.each do |service| %>
-        <%= link_to service_path(service) do %>
-        <div class="card-event-home">
+    <div class="container mt-5">
+      <div class="cards-home">
+        <% @services.each do |service| %>
+          <%= link_to service_path(service) do %>
+          <div class="card-event-home">
 
-          <% if service.image.nil? %>
-           <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80" />
-          <% else %>
-            <img src="<%= service.image %>" alt="">
-          <% end %>
+            <% if service.image.nil? %>
+            <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80" />
+            <% else %>
+              <img src="<%= service.image %>" alt="">
+            <% end %>
 
-          <div class="card-event-infos-home">
-            <h2 class="text-ellipsis"> <%= service.name %></h2>
+            <div class="card-event-infos-home">
+              <h2 class="text-ellipsis"> <%= service.name %></h2>
+            </div>
           </div>
-        </div>
-        <% end %>
-      <%end %>
+          <% end %>
+        <%end %>
+      </div>
     </div>
   </div>

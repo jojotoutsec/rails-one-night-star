@@ -3,7 +3,7 @@
 
 <div class="d-flex">
   <div class="card">
-    <h2 class="booking-title">My bookings: </h2>
+    <h2 class="booking-title">My bookings</h2>
       <% if current_user.bookings.any? %>
         <% current_user.bookings.each do |booking|%>
         <div  class="i-booked">
@@ -27,12 +27,12 @@
           <p> <strong class='mini-title'>From:</strong> <%= booking.start_date %></p>
           <p><strong class='mini-title'>To:</strong> <%= booking.end_date %></p>
           </div>
-          <div>
+          <div class="status">
           <% if booking.status == "Accepted" %>
           <p class="accepted-offer">You accepted this offer</p>
           <% else %>
-          <%= link_to 'accept', accept_path(booking), class: "btn btn-success", data: {turbo_method: :patch} %>
-          <%= link_to 'decline', decline_path(booking), class: "btn btn-danger", data: {turbo_method: :patch}%>
+          <%= link_to 'Accept', accept_path(booking), class: "btn btn-success mx-2", data: {turbo_method: :patch} %>
+          <%= link_to 'Decline', decline_path(booking), class: "btn btn-danger", data: {turbo_method: :patch}%>
           <% end %>
           </div>
           </div>

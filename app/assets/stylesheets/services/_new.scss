@@ -2,3 +2,15 @@
   display: block;
   padding: 40px;
 }
+
+.golden-btn {
+  border-radius: 5px;
+  padding: 8px 16px;
+  opacity: 0.8;
+}
+
+.golden-btn:hover {
+  opacity: 1;
+  transition: .2s;
+  transform: scale(1.05);
+}
