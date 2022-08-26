@@ -93,4 +93,49 @@
 
 a {
   text-decoration: none;
+  opacity: 0.8;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+.cards-home {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-event-home {
+  height: 200px;
+  width: auto;
+  padding-left: 0;
+  border-radius: 10px;
+  display: flex;
+  font-size: 22px;
+  color: black;
+  font-weight: bolder;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.card-event-home img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100px;
+  width: auto;
+  min-width: 20px;
+  object-fit: cover;
+}
+
+.card-event-infos-home h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 0 3;
+  text-align: center;
+  padding-bottom: 30px;
 }
