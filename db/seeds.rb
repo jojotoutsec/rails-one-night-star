@@ -19,7 +19,7 @@ puts "old data destroyed"
 puts "create users"
 user1 = User.create!(email: "sds@gmail.com", username: "Jo", password: "azerty", first_name: "john", last_name: "do")
 user2 = User.create!(email: "abcde@gmail.com", username: "ab", password: "azerty", first_name: "abc", last_name: "de")
-user3 = User.create!(email: "azerty@gmail.com", username: "a", password: "azerty", first_name: "b", last_name: "c")
+user3 = User.create!(email: "azerty@gmail.com", username: "a", password: "azerty", first_name: "Jean-Michel", last_name: "De la boucle de mon ceinturon")
 
 
 puts "create services"
@@ -33,10 +33,15 @@ service6 = Service.create!(image: "https://images.unsplash.com/photo-1548438128-
 service7 = Service.create!(image: "https://images.unsplash.com/photo-1583275478661-1c31970669fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80", name: "A Day With Benoit Paire", category: "Time", price: 3300, user_id: user1.id, description: "A full day with Benoit Paire, the 33 years old French tennis player from Avignon. He will spend the entire day with you, playing tennis, visiting Avignon or just chating with you about his life experiences. He never won versus Federer or Nadal but he still has interesting stories to tell about !")
 service8 = Service.create!(image: "https://images.unsplash.com/photo-1643113231904-ea2af9b4ebcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80", name: "Concert With Michael Jackson doppleganger", category: "Concert", price: 400000, user_id: user2.id, description: "For almost true pop music fan, you can have the oportunity to almost meet the King of POP ! He will play almost perfectly his favorites songs like : Believe Jean, Bite it, Smoothie Criminal or even Thrilling. He has almost convinced every one who booked him.")
 service9 = Service.create!(image: "https://images.unsplash.com/photo-1562388831-a7a060b9c1fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1318&q=80", name: "Kayak With Philippe Croizon", category: "Sport", price: 900, user_id: user1.id, description: "For anyone who loves extreme condition, who likes dangerous situations, for the ones who loves ADRENALINE... One Night Star has what you need. An expedition in Perou in kayak with Philippe Croizon, the famous athlete who crossed the Manche swiming offers you a hand to visit the lake Titicaca. Sensitive heart abstain")
-service10 = Service.create!(image: "https://images.unsplash.com/photo-1562388831-a7a060b9c1fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1318&q=80", name: "Kayak With Philippe Croizon", category: "Sport", price: 900, user_id: user1.id, description: "For anyone who loves extreme condition, who likes dangerous situations, for the ones who loves ADRENALINE... One Night Star has what you need. An expedition in Perou in kayak with Philippe Croizon, the famous athlete who crossed the Manche swiming offers you a hand to visit the lake Titicaca. Sensitive heart abstain")
-
 
 puts "create bookings"
 
 booking1 = Booking.create!(start_date: "2022-10-11", end_date: "2022-10-12", user_id: user2.id, service_id: service1.id)
 puts "all done"
+
+
+
+
+
+
+
